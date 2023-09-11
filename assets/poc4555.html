@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Idea Saver</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Idea Saver</h1>
+        <form id="idea-form">
+            <label for="idea">Idea:</label><br>
+            <input type="text" id="idea" name="idea"><br>
+            <label for="description">Description:</label><br>
+            <textarea id="description" name="description"></textarea><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('idea-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            var idea = document.getElementById('idea').value;
+            var description = document.getElementById('description').value;
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", `https://https://zapler.run-us-west2.goorm.site
+/?idea=${encodeURIComponent(idea)}&description=${encodeURIComponent(description)}`, true);
+            xhr.send();
+        });
+    </script>
+</body>
+</html>
