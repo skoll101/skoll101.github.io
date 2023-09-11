@@ -20,7 +20,7 @@
             <input type="text" id="idea" name="idea"><br>
             <label for="description">Description:</label><br>
             <textarea id="description" name="description"></textarea><br>
-            <input type="submit" value="Submit">
+            <a id="submit-button" href="#">Submit</a>
         </form>
     </div>
 
@@ -31,10 +31,7 @@
             var idea = document.getElementById('idea').value;
             var description = document.getElementById('description').value;
 
-            var xhr = new XMLHttpRequest();
-            xhr.open("GET", `https://https://zapler.run-us-west2.goorm.site
-/?idea=${encodeURIComponent(idea)}&description=${encodeURIComponent(description)}`, true);
-            xhr.send();
+            document.getElementById('submit-button').href = `https://https://zapler.run-us-west2.goorm.site/?idea=${idea}&description=${description}`;
         });
     </script>
 </body>
