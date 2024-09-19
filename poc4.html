@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Tabs Example</title>
+    <style>
+        .header-right {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-right">
+        <a href="#">Click Me</a>
+    </div>
+
+    <script>
+    function thiser() {
+        let clickMe = document.querySelector(".header-right a");
+        clickMe.addEventListener("click", function(e) {
+            e.preventDefault();  
+            
+            
+            window.open('https://www.flightclub.com/web-api/v1/addresses?cb=testerr', '_blank');
+            
+            
+            location.href = "https://www.flightclub.com/web-api/v1/get_user?cb=1234";
+        });
+    }
+
+    
+    document.addEventListener("DOMContentLoaded", thiser);
+    </script>
+</body>
+</html>
