@@ -1,1 +1,1 @@
-alert('skoll101');
+alert("Wizer");
